@@ -1,10 +1,12 @@
-server:
-  port: 8888
 spring:
   application:
-    name: rdg-config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/rdGxd/rdg-config-server
+    name: greeting-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+greeting-service:
+  greeting: "Pronto"
+  default-value: "World"
